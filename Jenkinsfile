@@ -8,8 +8,9 @@ node('slave1'){
    def gradleHome = tool 'gradle4' 
    sh "${gradleHome}/bin/gradle build"
   }
+  /*
   post('badge'){
   addBadge(icon: green.gif, text: "its working")
   
-  }
+  }*/
 }
