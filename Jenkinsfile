@@ -6,7 +6,7 @@ node('slave1'){
   stage('build'){
    //bulid the code
    def gradleHome = tool 'gradle4' 
-    ${gradleHome}/bin/gradle build
+   sh "${gradleHome}/bin/gradle build"
   }
   post('badge'){
   addBadge(icon: green.gif, text: "its working")
