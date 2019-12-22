@@ -15,7 +15,6 @@ node('slave1'){
     echo "Erroe occurd"
   }
   stage('post'){
-    echo 
     if( currentBuild.result == 'SUCCESS'){
       addBadge(icon: 'green.gif', text: "its working")
     }
