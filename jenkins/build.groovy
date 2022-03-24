@@ -6,8 +6,7 @@ node(''){
     }
 
     stage('test code'){
-        sh '''cd app 
-            python3 app.py'''
+        def customImage = docker.build("my-app:${env.BUILD_ID}")
     }
 
 
