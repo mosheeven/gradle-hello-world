@@ -1,6 +1,7 @@
 
 import sys
 from traceback import print_tb
+import os
 
 def boom7(limit):
     for num in range(limit):
@@ -11,5 +12,5 @@ def boom7(limit):
 
 
 if __name__ == '__main__':
-    limit = int(sys.argv[1])
+    limit = int(os.getenv("MAX_NUM"))
     boom7(limit)
