@@ -5,9 +5,14 @@ node(''){
         git branch: 'moshe/7boom', url: 'https://github.com/mosheeven/gradle-hello-world.git'
     }
 
-    stage('test code'){
+    stage('docker build and run'){
         sh '''docker build -t boom:${BUILD_ID} .
         docker run -e MAX_NUM=${MAX_NUM} boom:${BUILD_ID}'''
+    }
+
+    stage('clean'){
+       sh'docker images rmi $(docker images -q)'
+
     }
 
 
