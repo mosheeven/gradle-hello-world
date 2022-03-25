@@ -6,7 +6,8 @@ node(''){
     }
 
     stage('test code'){
-        def customImage = docker.build("my-app:${env.BUILD_ID}")
+        sh ''' docker build -t boom:${env.BUILD_ID} .
+        '''
     }
 
 
