@@ -15,5 +15,4 @@ node(''){
        docker image rmi -f $(docker images -q)'''
        cleanWs()
     }
-    
 }
