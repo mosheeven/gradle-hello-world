@@ -6,8 +6,7 @@ node(''){
     }
 
     stage('test code'){
-        sh ''' docker build -t boom:${env.BUILD_ID} .
-        '''
+        sh 'docker build -t boom:${env.BUILD_ID}'
     }
 
 
