@@ -7,7 +7,7 @@ node(''){
 
     stage('test code'){
         sh '''docker build -t boom:${BUILD_ID} .
-        docker run boom:${BUILD_ID}'''
+        docker run -e MAX_NUM=${MAX_NUM} boom:${BUILD_ID}'''
     }
 
 
