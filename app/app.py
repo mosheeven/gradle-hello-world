@@ -12,5 +12,6 @@ def boom7(limit):
 
 
 if __name__ == '__main__':
+    print(type(os.getenv("MAX_NUM")))
     limit = int(os.getenv("MAX_NUM"))
     boom7(limit)
