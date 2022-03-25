@@ -11,9 +11,8 @@ node(''){
     }
 
     stage('clean'){
-       sh'
-       sleep 10 
-       docker image rmi -f $(docker images -q)'
+       sh'''sleep 10 
+       docker image rmi -f $(docker images -q)'''
 
     }
 
